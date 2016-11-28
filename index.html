@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+        <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+   
+    <!-- Bootstrap -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<!-- My stile link -->
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    
+  <!--  <!-- Angular.js 1 -->
+	<script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script> -->
+	<!-- Angular route -->
+	<script src="https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
+	<!-- Angular recourse -->
+	<script src="https://code.angularjs.org/1.5.5/angular-resource.min.js"></script>
+    <!-- My script tag-->
+    <!-- <script src=""></script> -->
+</head>
+<body>
+	<div id="wrapper" class="wrapper">
+		<div class="truecontent">
+			<nav class="navbar navbar-inverse visible-lg">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">Road Mate</a>
+					</div>
+				</div>
+			</nav>
+			
+			<nav class="navbar navbar-inverse visible-xs visible-sm visible-md">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<!-- <span class="sr-only"></span> -->
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Road Mate</a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#postcodeHeader">Postcode Finder <span class="sr-only">(current)</span></a></li>
+							<li><a href="#addressHeader">Address Finder</a></li>
+							<li><a href="#locationHeader">Location Detector</a></li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+			<div class="container">
+				<div class="row">
+				<!-- column 1 -->
+					<div class="col-sm-6 col-lg-4 column1">
+						<h1 id="postcodeHeader" class="page-header header">Postcode Finder</h1>
+						<div class="input">
+						<input id="addressInput" class="form-control alert alert-info" type="text" placeholder="Address">
+						</div>
+						<button class="btn btn-primary postcodeButton" value>Get Post Code</button>
+					
+						<div class= "footer">
+						<h2 class="postCode result"></h2>
+						</div>
+					
+						<!-- go to top -->
+						<ul class="nav nav-tabs navbar navbar-inverse visible-xs visible-sm visible-md">
+							<li role="presentation"><a class="" href="#wrapper">Go to top</a></li>
+						</ul>
+					</div>
+					<!-- column 2  -->
+					<div class="col-sm-6 col-lg-4 column2">
+						<h1  id="addressHeader" class="page-header header">Address Finder</h1>
+						<div class="input">
+						<input id="postcodeInput" class="form-control alert alert-info" type="text" placeholder="Postcode">
+						</div>
+						<button class="btn btn-primary addressButton">Get Adress</button>
+						<div class= "footer">
+						<h2 class="address result"></h2>
+						</div>
+						<!-- go to top -->
+						<ul class="nav nav-tabs navbar navbar-inverse visible-xs visible-sm visible-md">
+							<li role="presentation"><a class="" href="#wrapper">Go to top</a></li>
+						</ul>
+					</div>
+					<!-- column 3 -->
+					<div class="col-sm-12 col-lg-4 column3">
+						<h1 id="locationHeader" class="page-header header">Location Detector</h1>
+						<div class="input"><div class="alert alert-info form-conrol note">Please allow location service in your browser</div></div>
+						<button class="btn btn-primary locationButton">Get Location</button>
+						<a href="pages/locationMap.html"><button class="btn btn-primary mapButton pull-right">Location Map</button></a>
+						<div class= "footer">
+						<h2 class="location result"></h2>
+						</div>
+						<!-- go to top -->
+						<ul class="nav nav-tabs navbar navbar-inverse visible-xs visible-sm visible-md">
+							<li role="presentation"><a class="" href="#wrapper">Go to top</a></li>
+						</ul>
+					</div>
+				</div> <!-- End of row	 -->
+				<div class="row">
+					<div class="col-xs-12">
+						
+						<!-- map.html -->
+					</div>
+				</div>
+			</div> <!-- End of container	 -->
+		</div> <!-- End of truecontent	 -->
+    </div> <!-- End of wrapper	-->
+
+	
+	<script>
+	/***************************** resizing the height *********************/
+		$(function(){
+			var windowH = $(window).height();
+			var wrapperH = $('#wrapper').height();
+			if(windowH > wrapperH) {                            
+				$('#wrapper').css({'height':($(window).height())+'px'});
+			}                                                                               
+			$(window).resize(function(){
+				var windowH = $(window).height();
+				var wrapperH = $('#wrapper').height();
+				var differenceH = windowH - wrapperH;
+				var newH = wrapperH + differenceH;
+				var truecontentH = $('#truecontent').height();
+				if(windowH > truecontentH) {
+					$('#wrapper').css('height', (newH)+'px');
+				}
+
+			})          
+		}); 
+	/************************** getting post code from an address *********************************/
+		$('.postcodeButton').click(function(){
+			$.ajax({
+				type:"GET",
+				url:"https://maps.googleapis.com/maps/api/geocode/xml?address="+encodeURIComponent($('#addressInput').val())+"&key=AIzaSyA8Tmr_PB7CItFpvOghvoyzvfCHlKfukrI",
+				dataType:'xml',
+				success: function(xml){
+					$(xml).find('address_component').each(function(){
+						if($(this).find('type').text() == 'postal_code'){
+							var postCode = ($(this).find('long_name').text());
+						$('.postCode').html(postCode+'<div><br/></div>').fadeIn(500);
+						}
+					});
+				}
+			});
+		});
+		/**********************getting an address from a postcode ***************************************/
+		$('.addressButton').click(function(){
+			$.ajax({
+				type:"GET",
+				url:"https://maps.googleapis.com/maps/api/geocode/xml?address="+encodeURIComponent($('#postcodeInput').val())+"&key=AIzaSyA8Tmr_PB7CItFpvOghvoyzvfCHlKfukrI",
+				dataType:'xml',
+				success: function(xml){
+					var address = $(xml).find('formatted_address').text();
+						$('.address').html(address).fadeIn(500);
+				}
+			});
+		});
+
+		/********************************** location ********************/ 
+
+		// Note: This example requires that you consent to location sharing when
+		// prompted by your browser. If you see the error "The Geolocation service
+		// failed.", it means you probably did not give permission for the browser to
+		// locate you.
+	  
+		$('.locationButton').on('click',function(){
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(function(position) {
+					var pos = {
+					  lat: position.coords.latitude,
+					  lng: position.coords.longitude
+					};
+				
+					$.ajax({
+							type:"GET",
+							url:"https://maps.googleapis.com/maps/api/geocode/xml?address="+pos['lat']+','+pos['lng']+"&key=AIzaSyA8Tmr_PB7CItFpvOghvoyzvfCHlKfukrI",
+							dataType:'xml',
+							success: function(xml){
+								var address = $(xml).find('formatted_address').text();
+								$('.location').html('<p>'+address.substring(0,49)+'</p>' );
+							}
+					});
+				});
+			}
+		});
+		/************************** location map ***********************************/
+		$('.mapButton').on('click',function(){
+				$.ajax({
+						type:"GET",
+						url:"map.html",
+						success: function(){
+							
+						}
+				});
+			});
+			
+		/************************* Auto complete address ****************************/
+		
+		var autocomplete;
+		function initAutocomplete() {
+			// Create the autocomplete object, restricting the search to geographical
+			// location types.
+			autocomplete = new google.maps.places.Autocomplete(
+				/** @type {!HTMLInputElement} */(document.getElementById('addressInput')),
+				{types: ['geocode']});
+		}
+
+      // Bias the autocomplete object to the user's geographical location,
+      // as supplied by the browser's 'navigator.geolocation' object.
+      function geolocate() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var geolocation = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            var circle = new google.maps.Circle({
+              center: geolocation,
+              radius: position.coords.accuracy
+            });
+            autocomplete.setBounds(circle.getBounds());
+          });
+        }
+      }
+	</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoEki6KKw_JuhdWV0kjwMiPfAzaBOhThU&libraries=places&callback=initAutocomplete"
+        async defer></script>
+
+</body>
+</html>
